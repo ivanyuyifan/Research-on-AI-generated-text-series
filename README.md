@@ -41,6 +41,7 @@ It is an open-source initiative to document our team's research on AI-generated 
 ```python
 # Example: Text diversity calculation
 diversity_score = len(unique_words) / total_words
+```
 
 ##Future Plans
 We are actively working on the following goals:
