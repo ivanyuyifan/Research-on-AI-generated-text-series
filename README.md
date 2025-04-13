@@ -44,7 +44,7 @@ diversity_score = len(unique_words) / total_words
 ```
 ---
 
-##Future Plans
+## Future Plans
 We are actively working on the following goals:
 - Finalize interdisciplinary evaluation framework
 - Publish reproducible datasets
@@ -52,5 +52,5 @@ We are actively working on the following goals:
 
 ---
 
-##Contact
+## Contact
 For collaboration or feedback, please open an issue or contact us at yuyifan@bjfu.edu.cn .
