@@ -42,11 +42,11 @@ It is an open-source initiative to document our team's research on AI-generated 
 # Example: Text diversity calculation
 diversity_score = len(unique_words) / total_words
 
-Future Plans
+##Future Plans
 We are actively working on the following goals:
+- Finalize interdisciplinary evaluation framework
+- Publish reproducible datasets
+- Expand metric validation to multiple languages
 
-Finalize interdisciplinary evaluation framework
-Publish reproducible datasets
-Expand metric validation to multiple languages
-Contact
+##Contact
 For collaboration or feedback, please open an issue or contact us at yuyifan@bjfu.edu.cn .
