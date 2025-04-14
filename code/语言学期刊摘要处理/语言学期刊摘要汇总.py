@@ -1,31 +1,29 @@
 import os
 
-# 根目录路径
-root_dir = '/Users/fafaya/Research-on-AI-generated-text-series/语料库/应用语言学期刊'
+# 输入路径：所有干净的摘要 .txt 文件
+input_folder = '/Users/fafaya/Desktop/AL_Abstracts_All'
 
-# 收集所有摘要内容
+# 输出路径：合并并清洗后的最终文件
+output_path = '/Users/fafaya/Desktop/Merge_all_abstracts_AL_cleaned.txt'
+
+# 清洗函数：仅保留 ASCII 字符（去除中文、特殊符号）
+def clean_text(text):
+    return ''.join([c if ord(c) < 128 else ' ' for c in text])
+
+# 收集并清洗所有摘要
 all_abstracts = []
+for filename in sorted(os.listdir(input_folder)):
+    if filename.endswith('.txt'):
+        with open(os.path.join(input_folder, filename), 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+            cleaned = clean_text(content)
+            all_abstracts.append(cleaned)
 
-# 遍历所有子文件夹
-for dirpath, dirnames, filenames in os.walk(root_dir):
-    for filename in filenames:
-        if filename.endswith('.txt'):
-            file_path = os.path.join(dirpath, filename)
-            try:
-                with open(file_path, 'r', encoding='utf-8') as file:
-                    content = file.read().strip()
-                    all_abstracts.append(content)
-            except Exception as e:
-                print(f'无法读取文件 {file_path}，错误：{e}')
+# 合并为一个文本块（用两个换行分隔）
+merged_text = "\n\n".join(all_abstracts)
 
-# 将所有摘要连接为一个大文本，中间用两个换行分隔
-full_text = "\n\n".join(all_abstracts)
+# 写入最终文件
+with open(output_path, 'w', encoding='utf-8') as f:
+    f.write(merged_text)
 
-# 输出路径（你可以自定义名称）
-output_txt_path = '/Users/fafaya/Research-on-AI-generated-text-series/语料库/应用语言学期刊/Abstracts_All/Merge_all_abstracts.txt'
-
-# 写入纯文本文件
-with open(output_txt_path, 'w', encoding='utf-8') as f:
-    f.write(full_text)
-
-print(f"已成功汇总 {len(all_abstracts)} 个摘要，保存至：{output_txt_path}")
+print(f"✅ 成功合并并清洗 {len(all_abstracts)} 个摘要，文件保存至：{output_path}")
