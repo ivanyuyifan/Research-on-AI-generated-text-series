@@ -47,6 +47,8 @@ analyze_metrics <- function(al_data, cs_data, metrics, module_name) {
     Mean_Diff = numeric(),
     t_value = numeric(),
     p_value = numeric(),
+    d_value = numeric(),
+    d_magnitude = character(),
     Signif = character(),
     Module = character(),
     stringsAsFactors = FALSE
@@ -54,6 +56,9 @@ analyze_metrics <- function(al_data, cs_data, metrics, module_name) {
   
   for (metric in metrics) {
     t_result <- t.test(al_data[[metric]], cs_data[[metric]])
+    d_result <- cohen.d(al_data[[metric]], cs_data[[metric]])
+    d_val <- round(d_result$estimate, 3)
+    d_mag <- as.character(d_result$magnitude)
     
     results <- rbind(results, data.frame(
       Metric = metric,
@@ -66,6 +71,8 @@ analyze_metrics <- function(al_data, cs_data, metrics, module_name) {
       Mean_Diff = round(mean(al_data[[metric]], na.rm = TRUE) - mean(cs_data[[metric]], na.rm = TRUE), 4),
       t_value = round(t_result$statistic, 3),
       p_value = round(t_result$p.value, 5),
+      d_value = d_val,
+      d_magnitude = d_mag,
       Signif = ifelse(t_result$p.value < 0.001, "***",
                       ifelse(t_result$p.value < 0.01, "**",
                              ifelse(t_result$p.value < 0.05, "*", "n.s."))),
@@ -79,6 +86,16 @@ analyze_metrics <- function(al_data, cs_data, metrics, module_name) {
 # --------------------- 分析两个模块 ---------------------
 soph_results <- analyze_metrics(al_soph, cs_soph, soph_metrics, "Syntactic Sophistication")
 np_results <- analyze_metrics(al_np, cs_np, np_metrics, "NP Complexity")
+
+soph_results$adjusted_p <- round(p.adjust(soph_results$p_value, method = "bonferroni"), 5)
+soph_results$Bonferroni_Signif <- ifelse(soph_results$adjusted_p < 0.001, "***",
+                                         ifelse(soph_results$adjusted_p < 0.01, "**",
+                                                ifelse(soph_results$adjusted_p < 0.05, "*", "n.s.")))
+
+np_results$adjusted_p <- round(p.adjust(np_results$p_value, method = "bonferroni"), 5)
+np_results$Bonferroni_Signif <- ifelse(np_results$adjusted_p < 0.001, "***",
+                                       ifelse(np_results$adjusted_p < 0.01, "**",
+                                              ifelse(np_results$adjusted_p < 0.05, "*", "n.s.")))
 
 # --------------------- 合并 & 输出 ---------------------
 final_results <- rbind(soph_results, np_results)

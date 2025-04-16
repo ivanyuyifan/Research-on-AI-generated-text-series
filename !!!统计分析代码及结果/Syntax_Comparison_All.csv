@@ -1,16 +1,16 @@
-Metric,Mean_AL,Q1_AL,Q3_AL,Mean_CS,Q1_CS,Q3_CS,Mean_Diff,t_value,p_value,Signif,Module
-acad_av_construction_freq,152568.3742,96183.2556,198414.7508,159504.764,127719.1131,195887.5833,-6936.3898,-0.756,0.45066,n.s.,Syntactic Sophistication
-acad_av_lemma_construction_freq,12597.4346,1790.8106,21160.4674,20940.1605,4051.9461,29646.8299,-8342.7259,-3.498,0.00059,***,Syntactic Sophistication
-acad_av_faith_verb_cue,0.0694,0.052,0.0831,0.0706,0.0549,0.0832,-0.0012,-0.32,0.74916,n.s.,Syntactic Sophistication
-acad_av_delta_p_verb_cue,0.0413,0.0286,0.0513,0.0406,0.0262,0.0532,7e-04,0.235,0.81475,n.s.,Syntactic Sophistication
-acad_collexeme_ratio,5.1095,1.125,8,4.5065,1.3833,6.625,0.603,0.97,0.33317,n.s.,Syntactic Sophistication
-acad_construction_ttr,0.839,0.7619,0.9286,0.8341,0.7692,0.9091,0.0049,0.325,0.74587,n.s.,Syntactic Sophistication
-acad_construction_attested,0.8784,0.8383,0.9238,0.8871,0.849,0.942,-0.0088,-0.822,0.41218,n.s.,Syntactic Sophistication
-all_av_construction_freq_log,4.738,4.519,4.9652,4.8314,4.6346,5.0539,-0.0933,-2.196,0.02925,*,Syntactic Sophistication
-all_av_construction_freq_stdev,886405.576,762731.4607,1043591.083,913592.3741,850362.8792,1037070.271,-27186.798,-0.979,0.32882,n.s.,Syntactic Sophistication
-det_all_nominal_deps_struct,0.2759,0.2182,0.3262,0.3671,0.2747,0.462,-0.0913,-6.287,0,***,NP Complexity
-amod_all_nominal_deps_struct,0.3589,0.2939,0.438,0.4591,0.3636,0.543,-0.1002,-5.548,0,***,NP Complexity
-prep_all_nominal_deps_struct,0.303,0.25,0.36,0.2591,0.2,0.3131,0.0438,3.822,0.00018,***,NP Complexity
-vmod_all_nominal_deps_struct,0.0446,0.0207,0.0577,0.0392,0.0172,0.0567,0.0054,1.119,0.26437,n.s.,NP Complexity
-nn_all_nominal_deps_struct,0.2135,0.1375,0.2745,0.3188,0.2231,0.4006,-0.1054,-6.388,0,***,NP Complexity
-rcmod_all_nominal_deps_struct,0.0227,0,0.037,0.0334,0,0.0482,-0.0107,-2.807,0.00555,**,NP Complexity
+"Metric","Mean_AL","Q1_AL","Q3_AL","Mean_CS","Q1_CS","Q3_CS","Mean_Diff","t_value","p_value","d_value","d_magnitude","Signif","Module","adjusted_p","Bonferroni_Signif"
+"acad_av_construction_freq",152568.3742,96183.2556,198414.7508,159504.764,127719.1131,195887.5833,-6936.3898,-0.756,0.45066,-0.107,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"acad_av_lemma_construction_freq",12597.4346,1790.8106,21160.4674,20940.1605,4051.9461,29646.8299,-8342.7259,-3.498,0.00059,-0.495,"small","***","Syntactic Sophistication",0.00531,"**"
+"acad_av_faith_verb_cue",0.0694,0.052,0.0831,0.0706,0.0549,0.0832,-0.0012,-0.32,0.74916,-0.045,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"acad_av_delta_p_verb_cue",0.0413,0.0286,0.0513,0.0406,0.0262,0.0532,7e-04,0.235,0.81475,0.033,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"acad_collexeme_ratio",5.1095,1.125,8,4.5065,1.3833,6.625,0.603,0.97,0.33317,0.137,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"acad_construction_ttr",0.839,0.7619,0.9286,0.8341,0.7692,0.9091,0.0049,0.325,0.74587,0.046,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"acad_construction_attested",0.8784,0.8383,0.9238,0.8871,0.849,0.942,-0.0088,-0.822,0.41218,-0.116,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"all_av_construction_freq_log",4.738,4.519,4.9652,4.8314,4.6346,5.0539,-0.0933,-2.196,0.02925,-0.311,"small","*","Syntactic Sophistication",0.26325,"n.s."
+"all_av_construction_freq_stdev",886405.576,762731.4607,1043591.0825,913592.3741,850362.8792,1037070.2713,-27186.798,-0.979,0.32882,-0.138,"negligible","n.s.","Syntactic Sophistication",1,"n.s."
+"det_all_nominal_deps_struct",0.2759,0.2182,0.3262,0.3671,0.2747,0.462,-0.0913,-6.287,0,-0.889,"large","***","NP Complexity",0,"***"
+"amod_all_nominal_deps_struct",0.3589,0.2939,0.438,0.4591,0.3636,0.543,-0.1002,-5.548,0,-0.785,"medium","***","NP Complexity",0,"***"
+"prep_all_nominal_deps_struct",0.303,0.25,0.36,0.2591,0.2,0.3131,0.0438,3.822,0.00018,0.541,"medium","***","NP Complexity",0.00108,"**"
+"vmod_all_nominal_deps_struct",0.0446,0.0207,0.0577,0.0392,0.0172,0.0567,0.0054,1.119,0.26437,0.158,"negligible","n.s.","NP Complexity",1,"n.s."
+"nn_all_nominal_deps_struct",0.2135,0.1375,0.2745,0.3188,0.2231,0.4006,-0.1054,-6.388,0,-0.903,"large","***","NP Complexity",0,"***"
+"rcmod_all_nominal_deps_struct",0.0227,0,0.037,0.0334,0,0.0482,-0.0107,-2.807,0.00555,-0.397,"small","**","NP Complexity",0.0333,"*"
