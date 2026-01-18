@@ -49,7 +49,7 @@ diversity_score = len(unique_words) / total_words
 ```
 ---
 
-### Current Status & Next Steps
+## Current Status & Next Steps
 
 The core research framework and empirical analyses of this project have been completed. 
 Based on a series of finalized studies on AI-generated versus human-written academic abstracts, 
