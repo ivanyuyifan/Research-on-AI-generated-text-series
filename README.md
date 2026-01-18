@@ -1,6 +1,6 @@
-# Research on AI-Generated Text Series  
-[![Documentation](https://img.shields.io/badge/docs--in--progress-yellow)](https://github.com/ivanyuyifan/Research-on-AI-generated-text-series)  
-[![GitHub last commit](https://img.shields.io/github/last-commit/ivanyuyifan/Research-on-AI-generated-text-series)](https://github.com/ivanyuyifan/Research-on-AI-generated-text-series)  
+# Research on AI-Generated Text Series
+[![Status](https://img.shields.io/badge/status-completed-brightgreen)](https://github.com/ivanyuyifan/Research-on-AI-generated-text-series)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ivanyuyifan/Research-on-AI-generated-text-series)](https://github.com/ivanyuyifan/Research-on-AI-generated-text-series)
 
 ---
 
