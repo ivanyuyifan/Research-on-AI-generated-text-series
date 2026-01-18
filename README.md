@@ -24,7 +24,7 @@ It is an open-source initiative to document our team's research on AI-generated 
 | Computational Linguistics Journals | Cutting-edge research in computer science        | *IEEE Transactions on Neural Networks and Learning Systems*, *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *Journal of Machine Learning Research*, *Information Sciences*, *Journal of the ACM* |
 
 
-### 2. Research Metrics (Tentative)
+### 2. Research Metrics
 
 #### Interdisciplinary Abstracts  
 | Metric                    | Description                                                                 |
@@ -49,14 +49,19 @@ diversity_score = len(unique_words) / total_words
 ```
 ---
 
-## Future Plans  
-We are actively working on the following tasks over the next few months:  
-- Finalize the interdisciplinary evaluation framework  
-- Collect and generate a large dataset of AI-generated academic abstracts  
-- Conduct comparative experiments between human-written and AI-generated abstracts  
-- Run large-scale syntactic and discourse analysis using TAASSC and Coh-Metrix  
-- Prepare and submit research papers for conferences and journals  
-- Validate metric effectiveness across multiple academic disciplines and languages 
+### Current Status & Next Steps
+
+The core research framework and empirical analyses of this project have been completed. 
+Based on a series of finalized studies on AI-generated versus human-written academic abstracts, 
+we are currently focusing on extension, validation, and dissemination of the findings.
+
+Ongoing and forthcoming work includes:
+- Consolidating and refining the interdisciplinary evaluation framework for academic abstract analysis
+- Expanding the dataset of AI-generated abstracts across additional disciplines and languages
+- Conducting large-scale comparative experiments between human-written and AI-generated abstracts
+- Performing systematic syntactic and discourse analyses using TAASSC and Coh-Metrix
+- Evaluating the robustness and generalizability of linguistic metrics across domains
+- Preparing and submitting manuscripts to peer-reviewed conferences and journals
 
 ---
 
